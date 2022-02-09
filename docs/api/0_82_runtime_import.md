@@ -1,6 +1,4 @@
-# RuntimeImport(0.82) VRMData
-
-from `0.82.1`
+# `v0.82.1` RuntimeImport VRMData
 
 以下の手順で import します。
 
@@ -20,7 +18,7 @@ GltfData Load(string path)
 }
 ```
 
-[GLB import](../gltf/0_82_glb_import.md) も参照してください。
+[GLB import](0_82_glb_import.md) も参照してください。
 
 ## 2. `VRMData` を得る
 
