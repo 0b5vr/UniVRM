@@ -82,7 +82,7 @@ namespace UniVRM10
 
             GUILayout.Label("3, Setup", EditorStyles.boldLabel);
 
-            var vrmInstance = m_modelRoot.GetComponent<Vrm10Instance>();
+            var vrmInstance = m_modelRoot != null ? m_modelRoot.GetComponent<Vrm10Instance>() : null;
             var alreadyHasVrmInstance = vrmInstance != null;
             var isReady = m_modelRoot != null && m_vrmObject != null;
 
