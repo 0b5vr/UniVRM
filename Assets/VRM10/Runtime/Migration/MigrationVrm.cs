@@ -115,6 +115,22 @@ namespace UniVRM10
                         AllowRedistribution = false,
                     };
                     Vrm10Exporter.ExportMeta(vrm1, meta, null);
+
+                    // VRM0.0用のサムネイルを引き継ぐ
+                    // https://github.com/vrm-c/UniVRM/blob/v0.108.0/Assets/VRM10/Runtime/Migration/MigrationVrmMeta.cs#L59-L73
+                    if (vrm0["meta"].TryGet("texture", out var textureIndexJson))
+                    {
+                        var textureIndex = textureIndexJson.GetInt32();
+                        if (textureIndex == -1)
+                        {
+                            vrm1.Meta.ThumbnailImage = -1;
+                        }
+                        else
+                        {
+                            var gltfTexture = gltf.textures[textureIndex];
+                            vrm1.Meta.ThumbnailImage = gltfTexture.source;
+                        }
+                    }
                 }
                 // humanoid (required)
                 vrm1.Humanoid = MigrationVrmHumanoid.Migrate(vrm0["humanoid"]);
