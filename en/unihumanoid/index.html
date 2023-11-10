@@ -303,6 +303,9 @@
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../release/112/index.html">v0.112～ (Unity-2021.3) 最新版をご利用ください</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../release/112/v0.112.0.html">v0.112.0 Unity-2021.3LTS and URP MToon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release/112/v0.113.0.html">v0.113.0 VrmAnimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release/112/v0.114.0.html">v0.114.0 VrmAnimation Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release/112/v0.115.0.html">v0.115.0 Fix ExpressionLookAt and PR merge</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../release/how_to_release.html">リリース作業手順</a></li>
@@ -345,10 +348,10 @@
 <p>Unity humanoid utility with bvh importer.</p>
 <section id="bvh-runtime-loader">
 <h2>BVH runtime loader<a class="headerlink" href="#bvh-runtime-loader" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-cs notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">context</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BvhImporterContext</span><span class="p">();</span><span class="w"></span>
-<span class="n">context</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">path</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-cs notranslate"><div class="highlight"><pre><span></span><span class="kt">var</span><span class="w"> </span><span class="n">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BvhImporterContext</span><span class="p">();</span>
+<span class="n">context</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">path</span><span class="p">);</span>
 <span class="n">context</span><span class="p">.</span><span class="n">Load</span><span class="p">();</span><span class="w"> </span><span class="c1">// create Skeleton hierarchy and mesh for visualize</span>
-<span class="n">GameObject</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">context</span><span class="p">.</span><span class="n">Root</span><span class="p">;</span><span class="w"></span>
+<span class="n">GameObject</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">context</span><span class="p">.</span><span class="n">Root</span><span class="p">;</span>
 </pre></div>
 </div>
 <section id="runtimeloader">
